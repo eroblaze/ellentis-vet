@@ -5,7 +5,7 @@ interface SearchInterface {
 export default function Search({ className }: SearchInterface) {
   return (
     <div
-      className={`bg-my-white-100 border-my-white-300 flex w-[430px] items-center gap-[5px] rounded-md border-2 ps-[10px] has-focus:border-blue-500 ${className}`}>
+      className={`bg-my-white-100 border-my-white-300 flex w-[min(100%,330px)] items-center gap-[5px] rounded-md border-2 ps-[10px] has-focus:border-blue-500 ${className}`}>
       <svg
         className="text-my-white-950"
         width="15"

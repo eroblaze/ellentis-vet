@@ -27,3 +27,12 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+@media (width < 48rem) {
+  .slide-in {
+    display: flex;
+  }
+  .slide-out {
+    display: none;
+  }
+}

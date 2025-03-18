@@ -4,29 +4,28 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ellentis Vet",
-  description: "Ellentis",
+  description: "Ellentis"
 };
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: "swap",
+  display: "swap"
 });
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${workSans.variable} font-inter min-h-screen antialiased`}>
+      <body className={`${inter.variable} ${workSans.variable} font-inter text-my-white-950 min-h-screen antialiased`}>
         {children}
       </body>
     </html>
