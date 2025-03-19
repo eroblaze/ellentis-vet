@@ -40,4 +40,10 @@ body {
 .container {
   @apply max-w-5xl;
   @apply mx-auto;
+  @apply lg-16:px-0;
+  @apply p-[16px];
+}
+
+details[open] > summary > svg {
+  rotate: 0deg;
 }

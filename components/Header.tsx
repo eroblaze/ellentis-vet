@@ -10,7 +10,7 @@ export default function () {
   const menuRef = useRef<HTMLElement | null>(null);
 
   return (
-    <header className="lg-16:px-0 container flex w-full items-center justify-between p-[16px] outline-2">
+    <header className="container flex w-full items-center justify-between">
       <div className="bg-my-white-300 h-[31px] w-[31px] rounded-full"></div>
       <Hamburger ref={menuRef} />
       <nav

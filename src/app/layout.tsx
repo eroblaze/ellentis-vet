@@ -25,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${workSans.variable} font-inter text-my-white-950 min-h-screen antialiased`}>
+      <body
+        className={`${inter.variable} ${workSans.variable} font-inter text-my-white-950 min-h-screen antialiased max-md:has-[.slide-in]:overflow-hidden`}>
         {children}
       </body>
     </html>
