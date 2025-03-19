@@ -36,3 +36,8 @@ body {
     display: none;
   }
 }
+
+.container {
+  @apply max-w-5xl;
+  @apply mx-auto;
+}
