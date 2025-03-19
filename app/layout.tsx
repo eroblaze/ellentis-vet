@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Work_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "Ellentis Vet",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} ${workSans.variable} font-inter text-my-white-950 min-h-screen antialiased max-md:has-[.slide-in]:overflow-hidden`}>
+        <Header />
         {children}
       </body>
     </html>
