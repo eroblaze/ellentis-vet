@@ -2,15 +2,19 @@ import Link from "next/link";
 
 interface CurriculumInterface {
   open?: boolean;
+  week: string;
+  title: string;
+  classOneTitle: string;
+  classTwoTitle: string;
 }
 
-export default function Curriculum({ open = false }: CurriculumInterface) {
+export default function Curriculum({ open = false, week, title, classOneTitle, classTwoTitle }: CurriculumInterface) {
   return (
-    <div className="text-left">
-      <details className="border-my-white-300 rounded-xl border-2 p-[16px]">
+    <div className="mb-[16px] text-left last:mb-0">
+      <Details isOpen={open} className="border-my-white-300 rounded-xl border-2 p-[16px]">
         <summary className="flex list-none items-center justify-between">
           <span>
-            <b>WEEK ONE :</b> Introduction to HTML
+            <b>WEEK {`${week}`} :</b> {`${title}`}
           </span>
           <svg
             className="rotate-[-90deg] transition-[150ms_transform]"
@@ -30,17 +34,31 @@ export default function Curriculum({ open = false }: CurriculumInterface) {
           <ul className="flex flex-col">
             <Link href="#" className="group border-my-white-300 border-b-2 p-[16px]">
               <li>
-                <b>Class 1 :</b> <span className="group-hover:underline">HTML Foundations &amp; Structure </span>
+                <b>Class 1 :</b> <span className="group-hover:underline">{`${classOneTitle}`}</span>
               </li>
             </Link>
             <Link href="#" className="group p-[16px]">
               <li>
-                <b>Class 2 :</b> <span className="group-hover:underline">Multimedia, Forms &amp; Best Practices</span>
+                <b>Class 2 :</b> <span className="group-hover:underline">{`${classTwoTitle}`}</span>
               </li>
             </Link>
           </ul>
         </nav>
-      </details>
+      </Details>
     </div>
+  );
+}
+
+function Details({ isOpen, className, children }: { isOpen: boolean; className: string; children: React.ReactNode }) {
+  return (
+    <>
+      {isOpen ? (
+        <details open className={`${className}`}>
+          {children}
+        </details>
+      ) : (
+        <details className={`${className}`}>{children}</details>
+      )}
+    </>
   );
 }

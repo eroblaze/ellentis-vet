@@ -66,12 +66,37 @@ export default function Body() {
 
       <section className="mt-[50px] w-full text-center">
         <h2 className="font-work-sans mb-[16px] text-xl font-bold lg:text-2xl">CURRICULUM</h2>
-        <section>
-          <div></div>
-          <Curriculum />
-          <Curriculum />
-          <Curriculum />
-          <Curriculum />
+        <section className="grid grid-cols-[auto_1fr] gap-[16px]">
+          <div>
+            <span className="bg-my-white-300 relative mt-[20px] block h-[80px] w-[2px] before:absolute before:h-[15px] before:w-[15px] before:translate-x-[-50%] before:rounded-full before:bg-green-500"></span>
+          </div>
+          <section>
+            <Curriculum
+              open
+              week="ONE"
+              title="Introduction to HTML"
+              classOneTitle="HTML Foundations &amp; Structure"
+              classTwoTitle="Multimedia, Forms &amp; Best Practices"
+            />
+            <Curriculum
+              week="TWO"
+              title="CSS Fundamentals & Basic Styling"
+              classOneTitle="Introduction &amp; Basic Syntax"
+              classTwoTitle="Selectors, Specificity &amp; Basic Properties"
+            />
+            <Curriculum
+              week="THREE"
+              title="Introduction to HTML"
+              classOneTitle="HTML Foundations &amp; Structure"
+              classTwoTitle="Multimedia, Forms &amp; Best Practices"
+            />
+            <Curriculum
+              week="FOUR"
+              title="Introduction to HTML"
+              classOneTitle="HTML Foundations &amp; Structure"
+              classTwoTitle="Multimedia, Forms &amp; Best Practices"
+            />
+          </section>
         </section>
       </section>
     </main>
