@@ -12,12 +12,12 @@ export default function Curriculum({ open = false, week, title, classOneTitle, c
   return (
     <div className="mb-[16px] text-left last:mb-0">
       <Details isOpen={open} className="border-my-white-300 rounded-xl border-2 p-[16px]">
-        <summary className="flex list-none items-center justify-between">
+        <summary className="flex list-none items-center justify-between gap-[10px]">
           <span>
             <b>WEEK {`${week}`} :</b> {`${title}`}
           </span>
           <svg
-            className="rotate-[-90deg] transition-[150ms_transform]"
+            className="shrink-[0] grow-[0] rotate-[-90deg] transition-[150ms_transform]"
             width="12"
             height="8"
             viewBox="0 0 12 8"

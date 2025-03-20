@@ -35,6 +35,9 @@ body {
   .slide-out {
     display: none;
   }
+  .sidebar_toggle {
+    display: block;
+  }
 }
 
 .container {
