@@ -3,19 +3,23 @@ import FullCurriculum from "@/components/FullCurriculum";
 import { useRef } from "react";
 
 export default function Sidebar() {
-  const menuRef = useRef<HTMLDivElement | null>(null);
+  const currRef = useRef<HTMLElement | null>(null);
+  const svgRef = useRef<SVGSVGElement | null>(null);
+
   function handleMenuClicked() {
-    if (menuRef.current) {
-      menuRef.current.classList.toggle("sidebar_toggle");
+    if (currRef.current && svgRef.current) {
+      currRef.current.classList.toggle("sidebar_toggle");
+      svgRef.current.classList.toggle("svg_toggle");
     }
   }
   return (
     <>
-      <aside className="md:border-my-white-300 bg-my-white-50 sticky top-[63px] min-h-[calc(100vh-63px)] md:rounded-xl md:border-2 md:p-[16px]">
+      <aside className="md:border-my-white-300 sticky top-[63px] md:top-[70px] md:h-fit md:rounded-[30px] md:border-1 md:p-[20px]">
         <div
           onClick={handleMenuClicked}
-          className="border-my-white-300 flex items-center gap-[10px] border-b-1 p-[16px] md:hidden">
+          className="border-my-white-300 flex items-center gap-[10px] border-b-1 bg-[hsla(0,0%,100%,0.8)] p-[16px] backdrop-filter-[saturate(180%)_blur(5px)] md:hidden">
           <svg
+            ref={svgRef}
             className="shrink-[0] grow-[0] rotate-[-90deg] transition-[150ms_transform]"
             width="12"
             height="8"
@@ -28,9 +32,12 @@ export default function Sidebar() {
               fill="none"
             />
           </svg>
-          <p>Menu</p>
+          <p>Curriculum</p>
         </div>
-        <FullCurriculum ref={menuRef} className="max-md:hidden max-md:p-[16px]" />
+        <FullCurriculum
+          ref={currRef}
+          className="bg-my-white-50 max-md:absolute max-md:top-[100%] max-md:hidden max-md:h-[calc(100vh-63px)] max-md:overflow-y-auto max-md:p-[16px] max-md:pb-[80px]"
+        />
       </aside>
     </>
   );

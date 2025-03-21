@@ -11,7 +11,7 @@ interface CurriculumInterface {
 export default function Curriculum({ open = false, week, title, classOneTitle, classTwoTitle }: CurriculumInterface) {
   return (
     <div className="mb-[16px] text-left last:mb-0">
-      <Details isOpen={open} className="border-my-white-300 rounded-xl border-2 p-[16px]">
+      <Details isOpen={open} className="border-my-white-300 rounded-xl border-1 p-[16px]">
         <summary className="flex list-none items-center justify-between gap-[10px]">
           <span>
             <b>WEEK {`${week}`} :</b> {`${title}`}
@@ -30,9 +30,9 @@ export default function Curriculum({ open = false, week, title, classOneTitle, c
             />
           </svg>
         </summary>
-        <nav className="bg-my-white-100 border-my-white-300 mt-[16px] rounded-b-xl border-2">
+        <nav className="bg-my-white-100 border-my-white-300 mt-[16px] rounded-b-xl border-1">
           <ul className="flex flex-col">
-            <Link href="#" className="group border-my-white-300 border-b-2 p-[16px]">
+            <Link href="#" className="group border-my-white-300 border-b-1 p-[16px]">
               <li>
                 <b>Class 1 :</b> <span className="group-hover:underline">{`${classOneTitle}`}</span>
               </li>

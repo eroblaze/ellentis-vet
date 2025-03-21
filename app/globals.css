@@ -50,3 +50,7 @@ body {
 details[open] > summary > svg {
   rotate: 0deg;
 }
+
+.svg_toggle {
+  rotate: 0deg;
+}
