@@ -14,7 +14,7 @@ export default function Sidebar() {
   }
   return (
     <>
-      <aside className="md:border-my-white-300 sticky top-[63px] md:top-[70px] md:h-fit md:rounded-[30px] md:border-1 md:p-[20px]">
+      <aside className="lg-16:pl-0 sticky top-[63px] md:top-[calc(70px+16px)] md:h-fit md:overflow-y-auto md:pl-[12px]">
         <div
           onClick={handleMenuClicked}
           className="border-my-white-300 flex items-center gap-[10px] border-b-1 bg-[hsla(0,0%,100%,0.8)] p-[16px] backdrop-filter-[saturate(180%)_blur(5px)] md:hidden">
@@ -36,7 +36,7 @@ export default function Sidebar() {
         </div>
         <FullCurriculum
           ref={currRef}
-          className="bg-my-white-50 max-md:absolute max-md:top-[100%] max-md:hidden max-md:h-[calc(100vh-63px)] max-md:overflow-y-auto max-md:p-[16px] max-md:pb-[80px]"
+          className="bg-my-white-50 full_curriculum overflow-y-auto max-md:absolute max-md:top-[100%] max-md:hidden max-md:h-[calc(100vh-63px)] max-md:p-[16px] max-md:pb-[80px] md:h-[calc(100vh-70px)] md:pb-[30px] md:pl-[12px]"
         />
       </aside>
     </>

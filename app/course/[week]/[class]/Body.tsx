@@ -1,6 +1,6 @@
 export default function Body() {
   return (
-    <div className="max-md:p-[16px]">
+    <div className="lg-16:pr-0 max-md:p-[16px] md:pr-[12px]">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, molestiae optio, amet pariatur nulla laudantium
         fugiat maxime praesentium at sed adipisci esse, dicta fugit repudiandae. Mollitia repellat maxime modi possimus

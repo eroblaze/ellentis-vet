@@ -28,18 +28,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-@media (width < 48rem) {
-  .slide-in {
-    display: flex;
-  }
-  .slide-out {
-    display: none;
-  }
-  .sidebar_toggle {
-    display: block;
-  }
-}
-
 .container {
   @apply max-w-5xl;
   @apply mx-auto;
@@ -53,4 +41,22 @@ details[open] > summary > svg {
 
 .svg_toggle {
   rotate: 0deg;
+}
+
+@media (width < 48rem) {
+  .slide-in {
+    display: flex;
+  }
+  .slide-out {
+    display: none;
+  }
+  .sidebar_toggle {
+    display: block;
+  }
+}
+
+@media (width >= 48rem) {
+  .full_curriculum {
+    scrollbar-gutter: stable;
+  }
 }
