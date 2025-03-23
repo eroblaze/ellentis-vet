@@ -19,8 +19,9 @@
   --color-my-white-950: #292929;
 
   --breakpoint-lg-16: 65rem;
+  --breakpoint-830px: 51.875rem;
   --breakpoint-960px: 60rem;
-  --breakpoint-900px: 56.25rem;
+  --breakpoint-990px: 61.875rem;
 }
 
 body {

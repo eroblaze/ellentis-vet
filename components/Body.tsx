@@ -68,7 +68,7 @@ export default function Body() {
       <section className="mt-[50px] w-full text-center">
         <h2 className="font-work-sans mb-[16px] text-xl font-bold lg:text-2xl">CURRICULUM</h2>
         <FullCurriculum />
-        <Btn className="mx-auto mt-[20px] md:ml-[16px]">
+        <Btn className="mx-auto mt-[30px] md:ml-[16px]">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6 9.00342L2.25 5.25342L3.3 4.16592L5.25 6.11592V0.00341797H6.75V6.11592L8.7 4.16592L9.75 5.25342L6 9.00342ZM1.5 12.0034C1.0875 12.0034 0.734375 11.8565 0.440625 11.5628C0.146875 11.269 0 10.9159 0 10.5034V8.25342H1.5V10.5034H10.5V8.25342H12V10.5034C12 10.9159 11.8531 11.269 11.5594 11.5628C11.2656 11.8565 10.9125 12.0034 10.5 12.0034H1.5Z"
