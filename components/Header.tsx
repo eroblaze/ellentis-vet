@@ -15,9 +15,9 @@ export default function () {
         <Hamburger ref={menuRef} />
         <nav
           ref={menuRef}
-          className="max-md:bg-my-white-50 hidden w-full items-center max-md:fixed max-md:inset-0 max-md:min-h-screen max-md:flex-col max-md:gap-[30px] max-md:px-[16px] max-md:pt-[80px] md:flex md:justify-between">
+          className="max-md:bg-my-white-50 hidden w-full items-center max-md:fixed max-md:inset-0 max-md:min-h-screen max-md:flex-col max-md:gap-[30px] max-md:px-[16px] max-md:pt-[80px] md:grid md:grid-cols-[1fr_auto] md:gap-[36px]">
           {/*<Search className="990px:w-[430px] md:max-830px:w-[min(100%,280px)] flex md:ml-[23%]" /> */}
-          <Search className="justify-self-center md:w-[50%]" />
+          <Search className="930px:w-[60%] justify-self-end md:w-[calc(15vw+20%)]" />
           <ul className="md:max-990px:gap-[10px] flex items-center gap-[16px] max-md:w-full max-md:flex-col">
             <li>
               <a href="/">Home</a>
